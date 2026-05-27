@@ -33,7 +33,7 @@ body {
 }
 
 /* ==========================================================================
-   3. BARRA DE NAVEGACIÓN Y LOGO FUTURISTA
+   3. BARRA DE NAVEGACIÓN Y LOGO FUTURISTA (CON FUENTE ORBITRON)
    ========================================================================== */
 nav {
   display: flex;
@@ -59,12 +59,13 @@ nav {
   display: block;
 }
 
+/* Forzar la tipografía Orbitron y el color cian exacto del diseño */
 .logo-texto {
   font-family: 'Orbitron', sans-serif !important;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
-  color: #00d4ff !important;
-  letter-spacing: 1px;
+  color: #31b3d4 !important;
+  letter-spacing: 0.5px;
 }
 
 nav ul {
