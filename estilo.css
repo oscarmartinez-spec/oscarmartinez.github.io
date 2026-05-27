@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Montserrat para toda la web */
   background-color: #0a0f1e;
   color: #e0e0e0;
 }
@@ -33,7 +33,7 @@ body {
 }
 
 /* ==========================================================================
-   3. BARRA DE NAVEGACIÓN Y LOGO FUTURISTA (CON FUENTE ORBITRON)
+   3. BARRA DE NAVEGACIÓN Y LOGO DEFINITIVO (ESTILO MONTSERRAT BOLD)
    ========================================================================== */
 nav {
   display: flex;
@@ -41,7 +41,7 @@ nav {
   align-items: center;
   padding: 20px 60px;
   background-color: #0d1526;
-  border-bottom: 1px solid #00d4ff22;
+  border-bottom: 1px solid #00d4ff11;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -50,22 +50,21 @@ nav {
 .logo-contenedor {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .logo-svg {
-  height: 32px; 
+  height: 38px;  /* Altura perfecta para equilibrar la fuente */
   width: auto;
   display: block;
 }
 
-/* Forzar la tipografía Orbitron y el color cian exacto del diseño */
 .logo-texto {
-  font-family: 'Orbitron', sans-serif !important;
-  font-size: 26px;
-  font-weight: 700;
-  color: #31b3d4 !important;
-  letter-spacing: 0.5px;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 32px;      /* Tamaño grande y destacado */
+  font-weight: 800;      /* Extra Bold idéntico a tu imagen */
+  color: #31b3d4 !important; /* Color cian exacto de referencia */
+  letter-spacing: -0.5px; /* Ajuste sutil de separación de letras */
 }
 
 nav ul {
@@ -78,6 +77,7 @@ nav ul a {
   color: #e0e0e0;
   text-decoration: none;
   font-size: 15px;
+  font-weight: 700;
   transition: color 0.3s;
 }
 
@@ -96,6 +96,7 @@ nav ul a:hover {
 
 .hero h1 {
   font-size: 48px;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 20px;
   color: #ffffff;
@@ -142,6 +143,7 @@ nav ul a:hover {
 
 .servicios h2 {
   font-size: 36px;
+  font-weight: 800;
   color: #00d4ff;
   margin-bottom: 50px;
 }
@@ -176,6 +178,7 @@ nav ul a:hover {
   color: #ffffff;
   margin-bottom: 12px;
   font-size: 20px;
+  font-weight: 700;
 }
 
 .card p {
@@ -195,6 +198,7 @@ nav ul a:hover {
 
 .sobre-mi h2 {
   font-size: 36px;
+  font-weight: 800;
   color: #00d4ff;
   margin-bottom: 24px;
 }
@@ -218,6 +222,7 @@ nav ul a:hover {
 
 .contacto h2 {
   font-size: 36px;
+  font-weight: 800;
   color: #ffffff;
   margin-bottom: 16px;
 }
@@ -276,6 +281,7 @@ nav ul a:hover {
 
 .contenido-detalle h2 {
   font-size: 42px;
+  font-weight: 800;
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -304,6 +310,7 @@ nav ul a:hover {
 .utilidad-item h4 {
   color: #00d4ff;
   font-size: 18px;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
@@ -348,6 +355,10 @@ footer {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .logo-texto {
+    font-size: 26px;
   }
 
   .hero {
