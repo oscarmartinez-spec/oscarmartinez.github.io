@@ -29,7 +29,7 @@ body {
 
 .logo-link {
   text-decoration: none;
-  color: inherit;
+  color: inherit !important;
 }
 
 /* ==========================================================================
@@ -60,10 +60,10 @@ nav {
 }
 
 .logo-texto {
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Orbitron', sans-serif !important;
   font-size: 24px;
   font-weight: 700;
-  color: #00d4ff;
+  color: #00d4ff !important;
   letter-spacing: 1px;
 }
 
@@ -85,7 +85,7 @@ nav ul a:hover {
 }
 
 /* ==========================================================================
-   4. SECCIONES PRINCIPALES
+   4. SECCIONES PRINCIPALES (INDEX)
    ========================================================================== */
 .hero {
   text-align: center;
@@ -264,7 +264,7 @@ nav ul a:hover {
 }
 
 /* ==========================================================================
-   6. PÁGINAS DETALLE DE SERVICIOS
+   6. PÁGINAS DETALLE DE SERVICIOS (IA.HTML)
    ========================================================================== */
 .contenido-detalle {
   max-width: 900px;
