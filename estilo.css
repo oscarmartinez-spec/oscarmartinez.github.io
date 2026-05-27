@@ -1,7 +1,14 @@
+/* ==========================================================================
+   1. RESETEO GLOBAL Y CONFIGURACIÓN BASE
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave al usar el menú */
 }
 
 body {
@@ -9,6 +16,36 @@ body {
   background-color: #0a0f1e;
   color: #e0e0e0;
 }
+
+/* ==========================================================================
+   2. COMPONENTES REUTILIZABLES (BOTONES)
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  background-color: #00d4ff;
+  color: #0a0f1e;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: #00aacc;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   3. ESTRUCTURA Y SECCIONES
+   ========================================================================== */
 
 /* NAVEGACIÓN */
 nav {
@@ -20,6 +57,7 @@ nav {
   border-bottom: 1px solid #00d4ff22;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -49,7 +87,7 @@ nav ul a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 100px 40px;
+  padding: 120px 40px;
   background: linear-gradient(135deg, #0d2137 0%, #0a0f1e 100%); 
 }
 
@@ -69,22 +107,6 @@ nav ul a:hover {
   color: #a0b0c0;
   max-width: 600px;
   margin: 0 auto 40px;
-}
-
-.btn {
-  display: inline-block;
-  background-color: #00d4ff;
-  color: #0a0f1e;
-  padding: 14px 32px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #00aacc;
 }
 
 /* SERVICIOS */
@@ -110,12 +132,14 @@ nav ul a:hover {
   border: 1px solid #00d4ff22;
   border-radius: 12px;
   padding: 40px 24px;
-  transition: transform 0.3s, border 0.3s;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
   border-color: #00d4ff;
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.05);
 }
 
 .icono {
@@ -135,7 +159,7 @@ nav ul a:hover {
   line-height: 1.6;
 }
 
-/* SOBRE MÍ */
+/* SOBRE MÍ / NOSOTROS */
 .sobre-mi {
   padding: 80px 60px;
   text-align: center;
@@ -160,7 +184,7 @@ nav ul a:hover {
   color: #00d4ff;
 }
 
-/* CONTACTO */
+/* CONTACTO Y FORMULARIO */
 .contacto {
   padding: 80px 60px;
   text-align: center;
@@ -178,6 +202,42 @@ nav ul a:hover {
   font-size: 16px;
 }
 
+.formulario-contacto {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: #0d1526;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #00d4ff22;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-input input, 
+.grupo-input textarea {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: #0a0f1e;
+  border: 1px solid #00d4ff22;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.grupo-input input:focus, 
+.grupo-input textarea:focus {
+  border-color: #00d4ff;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.15);
+}
+
+.formulario-contacto .btn {
+  width: 100%;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -186,4 +246,45 @@ footer {
   color: #a0b0c0;
   font-size: 14px;
   border-top: 1px solid #00d4ff22;
+}
+
+/* ==========================================================================
+   4. DISEÑO RESPONSIVO (MOBILE FIRST / ADAPTACIÓN MÓVIL)
+   ========================================================================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  nav ul {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .servicios, .sobre-mi, .contacto {
+    padding: 60px 20px;
+  }
+
+  .servicios h2, .sobre-mi h2, .contacto h2 {
+    font-size: 28px;
+  }
+
+  .formulario-contacto {
+    padding: 24px;
+  }
 }
