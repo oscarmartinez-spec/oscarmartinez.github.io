@@ -50,7 +50,7 @@ nav ul a:hover {
 .hero {
   text-align: center;
   padding: 100px 40px;
-  background: linear-gradient(135deg, #0a0f1e 0%, #0d2137 100%);
+  background: linear-gradient(135deg, #0d2137 0%, #0a0f1e 100%); 
 }
 
 .hero h1 {
@@ -72,6 +72,7 @@ nav ul a:hover {
 }
 
 .btn {
+  display: inline-block;
   background-color: #00d4ff;
   color: #0a0f1e;
   padding: 14px 32px;
